@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+@font-face { font-family: 'Flatory Sans'; src: local('Inter'); font-weight: 400; font-style: normal; font-display: swap; }
+
+body { @apply bg-white text-neutral-800 antialiased; }
+::selection { background: #031B5E; color: #fff; }
+
+.link-underline{background-image:linear-gradient(currentColor,currentColor);background-position:0% 100%;background-repeat:no-repeat;background-size:0% 2px;transition:background-size .3s;}
+.link-underline:hover{background-size:100% 2px;}
+.ripple{position:relative;overflow:hidden;}
+.ripple:after{content:'';position:absolute;inset:0;background:radial-gradient(circle,rgba(0,0,0,.15) 10%,transparent 11%) center/10px 10px;opacity:0;transition:opacity .2s ease;}
+.ripple:active:after{opacity:1;transition:0s;}
